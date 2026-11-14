@@ -29,7 +29,7 @@ map("i", "<C-v>", '<C-r>+', { desc = "Paste from system clipboard" })
 
 
 -- Terminal
-map("n", "<C-'>", function()
+map("n", "<C-1>", function()
     vim.cmd("botright 12split")
     vim.cmd("terminal")
     vim.cmd("startinsert")
