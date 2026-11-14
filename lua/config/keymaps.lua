@@ -27,11 +27,16 @@ map("v", "<C-c>", '"+y', { desc = "Copy to system clipboard" })
 map("n", "<C-v>", '"+p', { desc = "Paste from system clipboard" })
 map("i", "<C-v>", '<C-r>+', { desc = "Paste from system clipboard" })
 
-
 -- Terminal
 map("n", "<C-1>", function()
-    vim.cmd("botright 12split")
-    vim.cmd("terminal")
+    local cwd = vim.fn.getcwd()
+
+    vim.cmd("botright 12new")
+
+    vim.fn.termopen(vim.o.shell, {
+        cwd = cwd,
+    })
+
     vim.cmd("startinsert")
 end, { desc = "Open terminal" })
 
