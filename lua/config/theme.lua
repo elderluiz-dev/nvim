@@ -84,6 +84,11 @@ local highlights = {
         bold = true,
     },
 
+    AlphaHeader = { fg = "#FFD54A", bold = true },
+    AlphaButtons = { fg = "#E0E0E0" },
+    AlphaShortcut = { fg = "#FFD54A", bold = true },
+    AlphaFooter = { fg = "#777777" },
+
 }
 
 for group, settings in pairs(highlights) do
